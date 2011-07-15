@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/TextMacros.js"></script>
+		<link rel="stylesheet" href="style/TextMacros.css" type="text/css"></link>
+
+		<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$("a").click(function() {
+		alert("Hi");
+	});
+	$("#myButton").click(function() {
+		alert("Hi, this is a button.");
+	});
+});
+
+		</script>
+	</head>
+	<body>
+			<a id="myLink" href="">Click me</a>
+			<input id="myButton" type="button" value="No, click me" />
+	</body>
+</html>
