@@ -1,26 +1,53 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<script type="text/javascript" src="scripts/jquery.js"></script>
-		<script type="text/javascript" src="scripts/TextMacros.js"></script>
-		<link rel="stylesheet" href="style/TextMacros.css" type="text/css"></link>
+  <head>
+    <link rel="stylesheet" href="style/TextMacros.css" type="text/css"></link>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.dimensions.js"></script>
+    <script type="text/javascript" src="scripts/TextMacros.js"></script>
 
-		<script type="text/javascript">
+    <script type="text/javascript">
 
 $(document).ready(function() {
+  $("#testDiv").hide();
 
-	$("a").click(function() {
-		alert("Hi");
-	});
-	$("#myButton").click(function() {
-		alert("Hi, this is a button.");
-	});
+  $("a").click(function() {
+    alert("Hi");
+  });
+
+  $("#myButton").click(function() {
+    alert("Hi, this is a button.");
+  });
+
+  var macroContainerList = $("#macroContainer ul");
+  for (var i = 0; i < macros.length; i++) {
+      var macro = macros[i];
+      appendMacroDetailsToList(macro, macroContainerList);
+  }
+
 });
 
-		</script>
-	</head>
-	<body>
-			<a id="myLink" href="">Click me</a>
-			<input id="myButton" type="button" value="No, click me" />
-	</body>
+    </script>
+
+  </head>
+  <body>
+    <div id="testDiv">
+      <a id="myLink" href="">Click me</a>
+      <input id="myButton" type="button" value="No, click me"/>
+    </div>
+
+    <br />
+    <br />
+	<div>
+	  <div style="float: left; width: 75%">
+	    <textarea class="editor" id="myEditor"></textarea>
+	  </div>
+	  <div style="float: right; width: 25%" id="macroContainer">
+	    <ul class="macroList">
+	    </ul>
+	  </div>
+	</div>
+    <br />
+    <br />
+  </body>
 </html>

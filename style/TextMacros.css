@@ -1,0 +1,37 @@
+body
+{ 
+  font-family: Verdana, Sans Serif;
+}
+
+div#testDiv
+{ 
+  border: solid 1px black;
+}
+
+textarea.editor
+{ 
+  width: 100%;
+  height: 800px;
+}
+
+ul.macroList
+{ 
+  position: relative;
+  border: solid 1px green;
+  list-style: none;
+  padding: 2px;
+}
+
+ul.macroList li
+{ 
+  position: relative;
+  z-index: 100;
+  border: solid 1px rgb(0, 100, 0);
+  margin: 2px;
+  padding: 2px;
+}
+
+ul.macroList li.hover
+{ 
+  background: rgb(100, 220, 200);
+}
