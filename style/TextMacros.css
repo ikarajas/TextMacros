@@ -1,6 +1,7 @@
 body
 { 
   font-family: Verdana, Sans Serif;
+  font-size: 10pt;
 }
 
 div#testDiv
@@ -17,9 +18,8 @@ textarea.editor
 ul.macroList
 { 
   position: relative;
-  border: solid 1px green;
   list-style: none;
-  padding: 2px;
+  padding: 10px;
 }
 
 ul.macroList li
@@ -29,6 +29,7 @@ ul.macroList li
   border: solid 1px rgb(0, 100, 0);
   margin: 2px;
   padding: 2px;
+  cursor: default;
 }
 
 ul.macroList li.hover

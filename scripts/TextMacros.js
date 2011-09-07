@@ -15,8 +15,8 @@ var macros =
    new Macro(/""([A-Za-z]+)""/g, "{{$1}}", "Replace double quotes with double braces."),
    new Macro(/\{@([A-Za-z]+)""/g, "$1", "Fix: {@ThisIsSomeText\"\""),
    new Macro(/\{@([A-Za-z0-9]+)\{@/g, "$1", "Fix: {@BlahBlah{@"),
-   new Macro(/\\\[FLEXUI\:"([a-zA-Z0-9]+)"\\\]/g, "[\"$1\"]", "Fix: \\[FLEXUI:\"startTime\"\\]"),
-   new Macro(/\\\[FLEXUI\:"([a-zA-Z0-9]+)"\]/g, "[\"$1\"]", "Fix: \\[FLEXUI:\"startTime\"]")
+   new Macro(/\\\[FLEXUI\:"([a-zA-Z0-9]+)"\\\]/g, "[\"$1\"]", "Fix: \\[FLEXUI:\"blah\"\\]"),
+   new Macro(/\\\[FLEXUI\:"([a-zA-Z0-9]+)"\]/g, "[\"$1\"]", "Fix: \\[FLEXUI:\"blah\"]")
    ];
 
 
@@ -43,4 +43,11 @@ function appendMacroDetailsToList(macro, macroContainerList) {
   };
   li.click(getClickCallback());
   macroContainerList.append(li);
+}
+
+function fitEditorToHeight() {
+  var myEditor = $("textarea#myEditor");
+  var myEditorTop = myEditor.position().top;
+  var windowHeight = $(window).height();
+  myEditor.height(windowHeight - myEditorTop - 10);
 }

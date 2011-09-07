@@ -9,15 +9,15 @@
     <script type="text/javascript">
 
 $(document).ready(function() {
-  $("#testDiv").hide();
+  //$("#testDiv").hide();
 
-  $("a").click(function() {
-    alert("Hi");
-  });
+  //$("a").click(function() {
+  //  alert("Hi");
+  //});
 
-  $("#myButton").click(function() {
-    alert("Hi, this is a button.");
-  });
+  //$("#myButton").click(function() {
+  //  alert("Hi, this is a button.");
+  //});
 
   var macroContainerList = $("#macroContainer ul");
   for (var i = 0; i < macros.length; i++) {
@@ -25,19 +25,14 @@ $(document).ready(function() {
       appendMacroDetailsToList(macro, macroContainerList);
   }
 
+  fitEditorToHeight();
+  $(window).resize(fitEditorToHeight);
 });
 
     </script>
 
   </head>
   <body>
-    <div id="testDiv">
-      <a id="myLink" href="">Click me</a>
-      <input id="myButton" type="button" value="No, click me"/>
-    </div>
-
-    <br />
-    <br />
 	<div>
 	  <div style="float: left; width: 75%">
 	    <textarea class="editor" id="myEditor"></textarea>
